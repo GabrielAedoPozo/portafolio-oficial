@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/onest':
+        specifier: ^5.2.9
+        version: 5.2.9
       astro:
         specifier: ^5.13.2
         version: 5.13.2(@types/node@24.3.0)(rollup@4.47.1)(typescript@5.9.2)
@@ -209,6 +212,9 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@fontsource/onest@5.2.9':
+    resolution: {integrity: sha512-UNlZYsT75z4fIZIKHQF8gcPmX7MvwmoqQ8URdee82SKpg4vLJYhmqo6enIzmOPiz/2sBwGcvD6nji4hHZWpsSw==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -1603,6 +1609,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.25.9':
     optional: true
+
+  '@fontsource/onest@5.2.9': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

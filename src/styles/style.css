@@ -1,0 +1,293 @@
+/* ---------------- NAV ---------------- */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* links centrados y icons a la derecha */
+
+  width: 95%;
+  max-width: 1100px;
+
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  background: rgba(15, 15, 40, 0.45);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex: 1; /* ocupa el espacio central */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  color: #ffffffcc;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #60a5fa, #22d3ee, #8b5cf6);
+  background-size: 200% 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease, background-position 0.6s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  background-position: 100% 0;
+}
+
+/* ---------------- ICONOS ---------------- */
+.social-icons {
+  display: flex;
+  gap: 18px;
+  font-size: 2rem;  
+  margin-left: auto; 
+}
+
+.social-icons a {
+  color: #ffffffd9;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+  transform: translateY(-2px) scale(1.15);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 2rem;
+
+  position: relative; /* para posicionar el arrow dentro del hero */
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.3);
+  flex-shrink: 0;
+    margin-bottom: 200px;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* antes 10px, reducimos */
+  margin-bottom: 200px;
+}
+
+.hero h1,
+.hero p,
+.hero .role {
+  margin: 0; 
+}
+
+
+/* Rol */
+.hero .role {
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  background: linear-gradient(-45deg, #cfd9f7, #b6c9f0, #a8d3ef);
+  background-size: 240% 240%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: blueFlow 12s ease-in-out infinite;
+}
+
+/* Typing */
+.typing {
+  font-size: 4rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #60a5fa;
+
+  background: linear-gradient(-45deg, #9bbcf7, #85d0f0, #a3bff6);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    typing 3s steps(25) forwards,
+    blink 0.7s infinite,
+    blueFlow 10s ease-in-out infinite;
+
+  display: inline-block;
+  width: fit-content;
+}
+
+.typing span {
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle{
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.678);
+    margin-top: 10px;
+}
+
+#arrow-down {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: rgba(255, 255, 255, 0.63);
+
+  display: inline-block;
+  animation: arrow-bounce 1.6s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Animaciones */
+@keyframes blueFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes typing {
+  from { max-width: 0; }
+  to   { max-width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  40%      { transform: translateY(-10px); }
+  60%      { transform: translateY(-4px); }
+}
+
+
+@media (prefers-reduced-motion: reduce){
+  #arrow-down{ animation: none; }
+}
+
+
+.about {
+  min-height: 100vh;
+  display: block; /* reemplaza el grid de la sección */
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+
+
+.square {
+  width: 550px;
+  height: 500px;
+  border: rgba(255, 255, 255, 0.534) 2px solid;
+  border-radius: 30px;
+  justify-self: start;     
+  margin-left: 0;        
+}
+
+
+.about-grid{
+  display: grid;
+  grid-template-columns: minmax(260px, 520px) 1fr;
+  gap: clamp(100px, 8vw, 500px);
+  align-items: center;
+  margin-top: 100px;
+  font-size: 1.5rem;
+
+}
+
+
+.about-text{
+  max-width: 60ch;
+  padding-left: clamp(8px, 2vw, 24px);
+  justify-self: start;
+  color: rgba(255, 255, 255, 0.582);
+}
+
+
+
+
+.skills{
+  min-height: 100vh;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  background: linear-gradient(90deg, #00BFFF, #9D4EDD); /* azul → morado */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.stack{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr)); /* 3 columnas en desktop */
+  gap: clamp(16px, 3vw, 28px);
+  margin-top: 100px;
+}
+
+.stack i{
+  font-size: 3.4rem; /* antes: 3rem */
+  color: rgba(255, 255, 255, 0.644);
+}
+
+.card-skills p{
+  font-size: 1.3rem;
+}
+
+.card-skills svg{
+  width: 56px;
+  height: 56px;
+}
+
+/* Responsive: 2 columnas en medium, 1 en mobile */
+@media (max-width: 1100px){
+  .stack{ grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+}
+@media (max-width: 700px){
+  .stack{ grid-template-columns: 1fr; }
+}
