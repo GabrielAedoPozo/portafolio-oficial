@@ -8,6 +8,30 @@ import '@fontsource/onest/500.css';
 import '@fontsource/onest/600.css';
 import '@fontsource/onest/700.css';
 import '@fontsource/onest/800.css';
+
+const projects = [
+  {
+    title: "Kusisa Reposterpia",
+    description: "Sitio para una empresa real de reposteria dedicada a la presentacion de la misma. (Con Dominio)",
+    image: "kusisa.png",
+    tags: ["Astro", "CSS", "JavaScript"],
+    link: "https://kusisareposteria.com/"
+  },
+  {
+    title: "Permodoro",
+    description: "Contador Pomodoro personalizable hecho para estudiantes.",
+    image: "permodoro.png", 
+    tags: ["HTML", "CSS", "JavaScript"],
+    link: "https://gabrielaedopozo.github.io/Permodoro/"
+  },
+  {
+    title: "Peruvian Flavors Coffee",
+    description: "Sitio para una empresa real de Café dedicada a la presentacion, la venta de productos y más de la misma.",
+    image: "peruvian-flavors.png",
+    tags: ["JavaScript", "APIs", "CSS", "Astro", "Componentes React"],
+    link: "https://gabrielaedopozo.github.io/PeruvianFlavorsCoffee/"
+  }
+];
 ---
 
 <Layout>
@@ -92,7 +116,7 @@ import '@fontsource/onest/800.css';
         <path fill="#21a366" d="M24.007,45.419c-0.574,0-1.143-0.15-1.646-0.44l-5.24-3.103c-0.783-0.438-0.401-0.593-0.143-0.682	c1.044-0.365,1.255-0.448,2.369-1.081c0.117-0.067,0.27-0.043,0.39,0.028l4.026,2.389c0.145,0.079,0.352,0.079,0.486,0l15.697-9.061	c0.145-0.083,0.24-0.251,0.24-0.424V14.932c0-0.181-0.094-0.342-0.243-0.432L24.253,5.446c-0.145-0.086-0.338-0.086-0.483,0	L8.082,14.499c-0.152,0.086-0.249,0.255-0.249,0.428v18.114c0,0.173,0.094,0.338,0.244,0.42l4.299,2.483	c2.334,1.167,3.76-0.208,3.76-1.591V16.476c0-0.255,0.2-0.452,0.456-0.452h1.988c0.248,0,0.452,0.196,0.452,0.452v17.886	c0,3.112-1.697,4.9-4.648,4.9c-0.908,0-1.623,0-3.619-0.982l-4.118-2.373C5.629,35.317,5,34.216,5,33.042V14.928c0-1.179,0.629-2.279,1.646-2.861L22.36,3.002c0.994-0.562,2.314-0.562,3.301,0l15.694,9.069C42.367,12.656,43,13.753,43,14.932	v18.114c0,1.175-0.633,2.271-1.646,2.861L25.66,44.971c-0.503,0.291-1.073,0.44-1.654,0.44"></path><path fill="#21a366" d="M28.856,32.937c-6.868,0-8.308-3.153-8.308-5.797c0-0.251,0.203-0.452,0.455-0.452h2.028	c0.224,0,0.413,0.163,0.448,0.384c0.306,2.066,1.218,3.108,5.371,3.108c3.308,0,4.715-0.747,4.715-2.502	c0-1.01-0.401-1.76-5.54-2.263c-4.299-0.424-6.955-1.371-6.955-4.809c0-3.167,2.672-5.053,7.147-5.053	c5.026,0,7.517,1.745,7.831,5.493c0.012,0.13-0.035,0.255-0.122,0.35c-0.086,0.09-0.208,0.145-0.334,0.145h-2.039	c-0.212,0-0.397-0.149-0.44-0.354c-0.491-2.173-1.678-2.868-4.904-2.868c-3.611,0-4.031,1.257-4.031,2.2	c0,1.143,0.495,1.477,5.367,2.122c4.825,0.64,7.116,1.544,7.116,4.935c0,3.418-2.853,5.379-7.827,5.379"></path>
       </svg>
 
-      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="48px" height="48px" baseProfile="basic"><linearGradient id="gMG_mkMd2oq4lWjgJJZtFa" x1="32.125" x2="32.125" y1="44.574" y2="60.885" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8ab4ff"/><stop offset="1" stop-color="#e492ff"/></linearGradient><path fill="url(#gMG_mkMd2oq4lWjgJJZtFa)" d="M32,47c-4.272,0-7.909-0.94-9.341-2.259C22.336,47.076,22.248,51.248,25,54	c0,0,0.615-3.824,3.5-3c1.75,0.5,1.25,3,1.25,4.875C29.75,56.875,30,59,34,61c0,0-2-5,4-8c4.198-2.099,3.989-6.15,3.486-8.397	C40.165,45.995,36.421,47,32,47z"/><linearGradient id="gMG_mkMd2oq4lWjgJJZtFb" x1="32" x2="32" y1="2.824" y2="62.426" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a6dff"/><stop offset="1" stop-color="#c822ff"/></linearGradient><path fill="url(#gMG_mkMd2oq4lWjgJJZtFb)" d="M51,42c-0.099,0-0.197-0.015-0.294-0.044l-13-4c-0.338-0.104-0.596-0.379-0.679-0.723	l-5.103-21.259L25.963,37.27c-0.09,0.319-0.332,0.574-0.646,0.679l-12,4c-0.355,0.12-0.745,0.029-1.012-0.229	c-0.268-0.26-0.369-0.646-0.264-1.004l11-37C23.168,3.291,23.558,3,24,3h16c0.442,0,0.832,0.291,0.959,0.715l11,37	c0.104,0.354,0.007,0.736-0.255,0.996C51.514,41.898,51.26,42,51,42z M38.839,36.212l10.671,3.283L39.254,5H24.746l-10.24,34.444	l9.675-3.226L30,15.436c0.249-0.891,1.055-1.451,1.963-1.461c0.925,0.018,1.691,0.634,1.907,1.533L38.839,36.212z"/><linearGradient id="gMG_mkMd2oq4lWjgJJZtFc" x1="32.126" x2="32.126" y1="2.824" y2="62.426" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a6dff"/><stop offset="1" stop-color="#c822ff"/></linearGradient><path fill="url(#gMG_mkMd2oq4lWjgJJZtFc)" d="M33.996,61.999c-0.151,0-0.303-0.034-0.443-0.104c-3.187-1.594-4.803-3.619-4.803-6.02	c0-0.351,0.017-0.722,0.033-1.099c0.069-1.535,0.07-2.636-0.558-2.814c-0.593-0.171-0.918-0.027-1.11,0.094	c-0.718,0.457-1.063,1.703-1.128,2.104c-0.06,0.37-0.322,0.677-0.68,0.792c-0.356,0.118-0.749,0.021-1.015-0.244	c-3.074-3.074-2.964-7.649-2.624-10.103c0.051-0.369,0.303-0.679,0.652-0.805c0.35-0.125,0.741-0.047,1.016,0.206	C24.379,44.966,27.534,46,32,46c4.453,0,7.777-1.049,8.76-2.086c0.254-0.268,0.635-0.373,0.991-0.275s0.629,0.385,0.71,0.745	c0.961,4.288-0.502,7.754-4.014,9.511c-4.981,2.49-3.681,6.313-3.517,6.74c0.148,0.385,0.046,0.825-0.26,1.103	C34.482,61.909,34.24,61.999,33.996,61.999z M27.724,49.885c0.34,0,0.692,0.051,1.051,0.153c2.196,0.628,2.087,3.056,2.007,4.828	c-0.016,0.346-0.031,0.687-0.031,1.009c0,0.476,0,1.736,1.946,3.177c-0.002-2.017,0.813-4.924,4.856-6.946	c2.722-1.361,3.322-3.673,3.183-5.761C38.738,47.376,35.556,48,32,48c-3.382,0-6.477-0.579-8.489-1.537	c-0.062,1.66,0.14,3.727,1.153,5.47c0.308-0.578,0.75-1.165,1.378-1.564C26.547,50.047,27.116,49.885,27.724,49.885z"/><linearGradient id="gMG_mkMd2oq4lWjgJJZtFd" x1="32.023" x2="32.023" y1="6.948" y2="36.278" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8ab4ff"/><stop offset="1" stop-color="#e492ff"/></linearGradient><path fill="url(#gMG_mkMd2oq4lWjgJJZtFd)" d="M37.762,7H26.238l-8.72,29.332l5.023-1.675l5.533-19.76c0.483-1.728,2.037-2.903,3.868-2.922	l0.03,0l0.03,0.001c1.85,0.035,3.382,1.267,3.814,3.066l4.703,19.595l6.011,1.849L37.762,7z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="48px" height="48px" baseProfile="basic"><linearGradient id="gMG_mkMd2oq4lWjgJJZtFa" x1="32.125" x2="32.125" y1="44.574" y2="60.885" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8ab4ff"/><stop offset="1" stop-color="#e492ff"/></linearGradient><path fill="url(#gMG_mkMd2oq4lWjgJJZtFa)" d="M32,47c-4.272,0-7.909-0.94-9.341-2.259C22.336,47.076,22.248,51.248,25,54	c0,0,0.615-3.824,3.5-3c1.75,0.5,1.25,3,1.25,4.875C29.75,56.875,30,59,34,61c0,0-2-5,4-8c4.198-2.099,3.989-6.15,3.486-8.397	C40.165,45.995,36.421,47,32,47z"/><linearGradient id="gMG_mkMd2oq4lWjgJJZtFb" x1="32" x2="32" y1="2.824" y2="62.426" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a6dff"/><stop offset="1" stop-color="#c822ff"/></linearGradient><path fill="url(#gMG_mkMd2oq4lWjgJJZtFb)" d="M51,42c-0.099,0-0.197-0.015-0.294-0.044l-13-4c-0.338-0.104-0.596-0.379-0.679-0.723l-5.103-21.259L25.963,37.27c-0.09,0.319-0.332,0.574-0.646,0.679l-12,4c-0.355,0.12-0.745,0.029-1.012-0.229c-0.268-0.26-0.369-0.646-0.264-1.004l11-37C23.168,3.291,23.558,3,24,3h16c0.442,0,0.832,0.291,0.959,0.715l11,37c0.104,0.354,0.007,0.736-0.255,0.996C51.514,41.898,51.26,42,51,42z M38.839,36.212l10.671,3.283L39.254,5H24.746l-10.24,34.444l9.675-3.226L30,15.436c0.249-0.891,1.055-1.451,1.963-1.461c0.925,0.018,1.691,0.634,1.907,1.533L38.839,36.212z"/><linearGradient id="gMG_mkMd2oq4lWjgJJZtFc" x1="32.126" x2="32.126" y1="2.824" y2="62.426" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1a6dff"/><stop offset="1" stop-color="#c822ff"/></linearGradient><path fill="url(#gMG_mkMd2oq4lWjgJJZtFc)" d="M33.996,61.999c-0.151,0-0.303-0.034-0.443-0.104c-3.187-1.594-4.803-3.619-4.803-6.02	c0-0.351,0.017-0.722,0.033-1.099c0.069-1.535,0.07-2.636-0.558-2.814c-0.593-0.171-0.918-0.027-1.11,0.094	c-0.718,0.457-1.063,1.703-1.128,2.104c-0.06,0.37-0.322,0.677-0.68,0.792c-0.356,0.118-0.749,0.021-1.015-0.244	c-3.074-3.074-2.964-7.649-2.624-10.103c0.051-0.369,0.303-0.679,0.652-0.805c0.35-0.125,0.741-0.047,1.016,0.206	C24.379,44.966,27.534,46,32,46c4.453,0,7.777-1.049,8.76-2.086c0.254-0.268,0.635-0.373,0.991-0.275s0.629,0.385,0.71,0.745	c0.961,4.288-0.502,7.754-4.014,9.511c-4.981,2.49-3.681,6.313-3.517,6.74c0.148,0.385,0.046,0.825-0.26,1.103	C34.482,61.909,34.24,61.999,33.996,61.999z M27.724,49.885c0.34,0,0.692,0.051,1.051,0.153c2.196,0.628,2.087,3.056,2.007,4.828	c-0.016,0.346-0.031,0.687-0.031,1.009c0,0.476,0,1.736,1.946,3.177c-0.002-2.017,0.813-4.924,4.856-6.946	c2.722-1.361,3.322-3.673,3.183-5.761C38.738,47.376,35.556,48,32,48c-3.382,0-6.477-0.579-8.489-1.537	c-0.062,1.66,0.14,3.727,1.153,5.47c0.308-0.578,0.75-1.165,1.378-1.564C26.547,50.047,27.116,49.885,27.724,49.885z"/><linearGradient id="gMG_mkMd2oq4lWjgJJZtFd" x1="32.023" x2="32.023" y1="6.948" y2="36.278" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8ab4ff"/><stop offset="1" stop-color="#e492ff"/></linearGradient><path fill="url(#gMG_mkMd2oq4lWjgJJZtFd)" d="M37.762,7H26.238l-8.72,29.332l5.023-1.675l5.533-19.76c0.483-1.728,2.037-2.903,3.868-2.922	l0.03,0l0.03,0.001c1.85,0.035,3.382,1.267,3.814,3.066l4.703,19.595l6.011,1.849L37.762,7z"/></svg>
 
 
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
@@ -121,20 +145,73 @@ import '@fontsource/onest/800.css';
   </div>
 
   <div class="buttons">
-    <button>Solidario</button>
     <button>Respetuoso</button>
     <button>Responsable</button>
-    <button>Colaborativo</button>
     <button>Trabajo en equipo</button>
     <button>Líder</button>
   </div>
 </section>
 
 
-<section class="Proyectos">
+<section class="projects">
   <h2 class="section-title">Proyectos</h2>
+
+  <div class="projects-grid">
+    {
+      projects.map(({ title, description, image, tags, link }) => (
+        <article class="project-card">
+          <div class="project-image">
+            <img
+              src={image}
+              alt={`Captura de pantalla del proyecto ${title}`}
+              loading="lazy"
+            />
+            <div class="project-overlay">
+              <a href={link} target="_blank" rel="noopener" class="project-link">
+                Ver proyecto
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul class="project-tags">
+              {tags.map(tag => <li>{tag}</li>)}
+            </ul>
+          </div>
+        </article>
+      ))
+    }
+  </div>
 </section>
 
-
+<section class="contact">
+  <h2 class="section-title">Contacto</h2>
+  
+  <div class="contact-container">
+    <div class="contact-info">
+      <p>¿Tienes algún proyecto en mente? ¡Hablemos!</p>
+      <div class="contact-links">
+        <a href="mailto:aedothegabriel@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i>
+          aedothegabriel@gmail.com
+        </a>
+        <a href="https://github.com/tuuser" target="_blank" class="contact-link">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/tuuser" target="_blank" class="contact-link">
+          <i class="fa-brands fa-discord"></i>
+          IshowAim
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 </Layout>
