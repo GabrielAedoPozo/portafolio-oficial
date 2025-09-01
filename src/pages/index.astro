@@ -11,8 +11,8 @@ import '@fontsource/onest/800.css';
 
 const projects = [
   {
-    title: "Kusisa Reposterpia",
-    description: "Sitio para una empresa real de reposteria dedicada a la presentacion de la misma. (Con Dominio)",
+    title: "Kusisa Repostería",
+    description: "Sitio para una empresa real de repostería dedicada a la presentacion de la misma. (Con Dominio)",
     image: "kusisa.png",
     tags: ["Astro", "CSS", "JavaScript"],
     link: "https://kusisareposteria.com/"
@@ -40,7 +40,7 @@ const projects = [
 
 <nav>
   <ul class="nav-links">
-    <li><a href="#about">Inicio</a></li>
+    <li><a href="#inicio">Inicio</a></li>
     <li><a href="#about">Sobre mí</a></li>
     <li><a href="#skills">Habilidades</a></li>
     <li><a href="#projects">Proyectos</a></li>
@@ -48,14 +48,14 @@ const projects = [
   </ul>
 
   <div class="social-icons">
-    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/GabrielAedoPozo"><i class="fab fa-github"></i></a>
     <a href="#"><i class="fab fa-linkedin"></i></a>
   </div>
 </nav>
 
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="inicio">
   <div class="circle"></div>
 
   <div class="content">
@@ -67,21 +67,11 @@ const projects = [
 
 </section>
 
-<!-- About Me -->
-<section class="about">
-  <h2 class="section-title">Sobre mí</h2>
 
-  <div class="about-grid">
-    <div class="square"></div>
 
-    <div class="about-text">
-      <p>Hola! Soy de Perú 🇵🇪 y tengo 12 años. En mis tiempos libres estudio y aprendo más sobre programación. <br> <br> Primero fue un hobbie pero ahora es mi pasión. Me gustan las matemáticas y los videojuegos y siempre trato de dar lo mejor de mi.</p>
-    </div>
-  </div>
-</section>
 
 <!-- Skills -->
-<section class="skills">
+<section class="skills" id="skills">
   <h2 class="section-title">Habilidades</h2>
 
   <div class="stack">
@@ -153,7 +143,7 @@ const projects = [
 </section>
 
 
-<section class="projects">
+<section class="projects" id="projects">
   <h2 class="section-title">Proyectos</h2>
 
   <div class="projects-grid">
@@ -190,7 +180,20 @@ const projects = [
   </div>
 </section>
 
-<section class="contact">
+<section class="about" id="about">
+  <h2 class="section-title">Sobre mí</h2>
+
+  <div class="about-grid">
+    <div class="square"></div>
+
+    <div class="about-text">
+      <p>Hola! Soy de Perú 🇵🇪 y tengo 12 años. En mis tiempos libres estudio y aprendo más sobre programación. <br> <br> Primero fue un hobbie pero ahora es mi pasión. Me gustan las matemáticas y los videojuegos y siempre trato de dar lo mejor de mi.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
   <h2 class="section-title">Contacto</h2>
   
   <div class="contact-container">
@@ -201,16 +204,29 @@ const projects = [
           <i class="fas fa-envelope"></i>
           aedothegabriel@gmail.com
         </a>
-        <a href="https://github.com/tuuser" target="_blank" class="contact-link">
+        <a href="https://github.com/GabrielAedoPozo" target="_blank" class="contact-link">
           <i class="fab fa-github"></i>
           GitHub
         </a>
-        <a href="https://linkedin.com/in/tuuser" target="_blank" class="contact-link">
+        <a href="https://discord.com/users/IshowAim" target="_blank" class="contact-link">
           <i class="fa-brands fa-discord"></i>
           IshowAim
         </a>
       </div>
     </div>
+
+    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Tu email" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Tu mensaje" required></textarea>
+      </div>
+      <button type="submit" class="form-button">Enviar mensaje</button>
+    </form>
   </div>
 </section>
 

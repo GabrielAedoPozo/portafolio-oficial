@@ -2,7 +2,7 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<link rel="icon" type="image/svg+xml" href="/portafolio-oficial/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Portafolio | Gabriel Aedo</title>
@@ -14,6 +14,13 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 	</head>
 	<body>
+		<div class="mobile-icons">
+			<a href="#"><i class="fas fa-home"></i></a>
+			<a href="#about"><i class="fas fa-user"></i></a>
+			<a href="#skills"><i class="fas fa-code"></i></a>
+			<a href="#projects"><i class="fas fa-laptop-code"></i></a>
+			<a href="#contact"><i class="fas fa-envelope"></i></a>
+		</div>
 		<slot />
 	</body>
 </html>
