@@ -55,13 +55,13 @@ const projects = [
 
 
 <!-- HERO -->
-<section class="hero" id="inicio">
-  <div class="circle"></div>
+<section class="hero">
+  <div class="circle hidden" data-animation="scale-in"></div>
 
   <div class="content">
-    <p class="role">Desarrollador Frontend</p>
-    <h1 class="typing"><span>Hey, soy Gabriel Aedo</span></h1>
-    <p class="subtitle">Soy Gabriel Aedo, un desarrollador frontend de Perú, <br> apasionado por crear experiencias digitales modernas,<br> funcionales y con diseño atractivo.</p>
+    <p class="role hidden">Desarrollador Frontend</p>
+    <h1 class="typing hidden"><span>Hey, soy Gabriel Aedo</span></h1>
+    <p class="subtitle hidden">Soy Gabriel Aedo, un desarrollador frontend de Perú, <br> apasionado por crear experiencias digitales modernas,<br> funcionales y con diseño atractivo.</p>
     <i class="fa-solid fa-arrow-down" id="arrow-down"></i>
   </div>
 
@@ -230,4 +230,28 @@ const projects = [
   </div>
 </section>
 
+<script>
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          entry.target.style.setProperty('--delay', index);
+          entry.target.classList.add(entry.target.dataset.animation || 'fade-up');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Seleccionar elementos para animar
+    document.querySelectorAll('.role, .typing, .subtitle, .circle, .project-card, .stack svg, .contact-links a, .section-title, .about-text, .square')
+      .forEach(el => {
+        el.classList.add('hidden');
+        observer.observe(el);
+      });
+  </script>
 </Layout>
