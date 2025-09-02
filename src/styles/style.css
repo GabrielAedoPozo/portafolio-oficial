@@ -83,13 +83,14 @@ nav {
 
 /* ---------------- HERO ---------------- */
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 3rem;
   padding: 0 2rem;
-
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative; /* para posicionar el arrow dentro del hero */
 }
 
@@ -99,14 +100,15 @@ nav {
   border-radius: 50%;
   border: 4px solid rgba(255,255,255,0.3);
   flex-shrink: 0;
-    margin-bottom: 200px;
+  margin-bottom: 0;
 }
 
 .hero .content {
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* antes 10px, reducimos */
-  margin-bottom: 200px;
+  gap: 1.5rem;
+  margin-bottom: 0;
 }
 
 .hero h1,
@@ -133,7 +135,7 @@ nav {
 
 /* Typing */
 .typing {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
@@ -162,8 +164,10 @@ nav {
 }
 
 .subtitle{
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.678);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 540px;
     margin-top: 10px;
 }
 
@@ -388,6 +392,7 @@ button:hover{
     max-width: 380px;
     min-height: 200px;
     flex-shrink: 0;
+    backdrop-filter: blur(5px);
   }
 
   .project-card:hover {
@@ -415,6 +420,11 @@ button:hover{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.05);
   }
 
   .project-overlay {
@@ -486,7 +496,87 @@ button:hover{
     border-radius: 99px;
   }
 
-  /* ---------------- CONTACTO ---------------- */
+  .project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.demo-link {
+  background: #3b82f6;
+  color: white;
+}
+
+.github-link {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.demo-link:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.github-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cta-primary,
+.cta-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 99px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cta-primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.cta-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-primary:hover,
+.cta-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.cta-primary:hover {
+  background: #2563eb;
+}
+
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---------------- CONTACTO ---------------- */
 .contact {
   min-height: 60vh;
   display: flex;
@@ -605,6 +695,35 @@ button:hover{
   transform: translateY(-2px);
 }
 
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  background: linear-gradient(90deg, #60a5fa, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.soft-skills {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.soft-skills span {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 99px;
+  color: #fff;
+}
+
 @media (max-width: 1024px) {
   .projects-grid {
     flex-direction: column;
@@ -644,6 +763,8 @@ button:hover{
     flex-direction: column;
     text-align: center;
     padding: 0 1rem;
+    padding-top: 6rem;
+    gap: 2rem;
   }
 
   .typing {
@@ -651,13 +772,13 @@ button:hover{
   }
 
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .circle {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 100px;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 0;
   }
 
   .section-title {

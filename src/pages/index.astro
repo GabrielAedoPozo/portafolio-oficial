@@ -9,27 +9,31 @@ import '@fontsource/onest/600.css';
 import '@fontsource/onest/700.css';
 import '@fontsource/onest/800.css';
 
+
 const projects = [
   {
     title: "Kusisa Repostería",
     description: "Sitio para una empresa real de repostería dedicada a la presentacion de la misma. (Con Dominio)",
     image: "kusisa.png",
     tags: ["Astro", "CSS", "JavaScript"],
-    link: "https://kusisareposteria.com/"
+    link: "https://kusisareposteria.com/",
+    github: "https://github.com/GabrielAedoPozo/Kusisa-Reposteria"
   },
   {
     title: "Permodoro",
     description: "Contador Pomodoro personalizable hecho para estudiantes.",
     image: "permodoro.png", 
     tags: ["HTML", "CSS", "JavaScript"],
-    link: "https://gabrielaedopozo.github.io/Permodoro/"
+    link: "https://gabrielaedopozo.github.io/Permodoro/",
+    github: "https://github.com/GabrielAedoPozo/Permodoro"
   },
   {
     title: "Peruvian Flavors Coffee",
     description: "Sitio para una empresa real de Café dedicada a la presentacion, la venta de productos y más de la misma.",
     image: "peruvian-flavors.png",
     tags: ["JavaScript", "APIs", "CSS", "Astro", "Componentes React"],
-    link: "https://gabrielaedopozo.github.io/PeruvianFlavorsCoffee/"
+    link: "https://gabrielaedopozo.github.io/PeruvianFlavorsCoffee/",
+    github: "https://github.com/GabrielAedoPozo/PeruvianFlavorsCoffee"
   }
 ];
 ---
@@ -38,7 +42,9 @@ const projects = [
 
   <Particles />
 
+
 <nav>
+  
   <ul class="nav-links">
     <li><a href="#inicio">Inicio</a></li>
     <li><a href="#about">Sobre mí</a></li>
@@ -53,31 +59,31 @@ const projects = [
   </div>
 </nav>
 
-
 <!-- HERO -->
-<section class="hero">
-  <div class="circle hidden" data-animation="scale-in"></div>
+<section class="hero" id="inicio">
+  <div class="circle">
 
-  <div class="content">
-    <p class="role hidden">Desarrollador Frontend</p>
-    <h1 class="typing hidden"><span>Hey, soy Gabriel Aedo</span></h1>
-    <p class="subtitle hidden">Soy Gabriel Aedo, un desarrollador frontend de Perú, <br> apasionado por crear experiencias digitales modernas,<br> funcionales y con diseño atractivo.</p>
-    <i class="fa-solid fa-arrow-down" id="arrow-down"></i>
   </div>
 
+  <div class="content">
+    <p class="role">Desarrollador Frontend</p>
+    <h1 class="typing">Hey, soy Gabriel Aedo</h1>
+    <p class="subtitle">Desarrollador frontend de Perú, apasionado por crear experiencias digitales modernas, funcionales y atractivas.</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="cta-primary">¡Hablemos!</a>
+      <a href="#projects" class="cta-secondary">Ver proyectos</a>
+    </div>
+    <a href="#about" class="scroll-down">
+      <i class="fa-solid fa-arrow-down" id="arrow-down"></i>
+    </a>
+  </div>
 </section>
-
-
-
 
 <!-- Skills -->
 <section class="skills" id="skills">
   <h2 class="section-title">Habilidades</h2>
 
   <div class="stack">
-
-  
-
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
       <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path><path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path><path fill="#FFF" d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z"></path><path fill="#EEE" d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z"></path>
       </svg>
@@ -134,11 +140,13 @@ const projects = [
       </svg>
   </div>
 
-  <div class="buttons">
-    <button>Respetuoso</button>
-    <button>Responsable</button>
-    <button>Trabajo en equipo</button>
-    <button>Líder</button>
+  <div class="soft-skills">
+    <span>Responsabilidad</span>
+    <span>Respeto</span>
+    <span>Trabajo en equipo</span>
+    <span>Liderazgo</span>
+    <span>Comunicación</span>
+    <span>Resolución de problemas</span>
   </div>
 </section>
 
@@ -148,7 +156,7 @@ const projects = [
 
   <div class="projects-grid">
     {
-      projects.map(({ title, description, image, tags, link }) => (
+      projects.map(({ title, description, image, tags, link, github }) => (
         <article class="project-card">
           <div class="project-image">
             <img
@@ -173,6 +181,11 @@ const projects = [
             <ul class="project-tags">
               {tags.map(tag => <li>{tag}</li>)}
             </ul>
+            <div class="project-links">
+              <a href={github} class="github-link">
+                <i class="fab fa-github"></i> Código
+              </a>
+            </div>
           </div>
         </article>
       ))
@@ -182,12 +195,12 @@ const projects = [
 
 <section class="about" id="about">
   <h2 class="section-title">Sobre mí</h2>
-
   <div class="about-grid">
     <div class="square"></div>
-
     <div class="about-text">
-      <p>Hola! Soy de Perú 🇵🇪 y tengo 12 años. En mis tiempos libres estudio y aprendo más sobre programación. <br> <br> Primero fue un hobbie pero ahora es mi pasión. Me gustan las matemáticas y los videojuegos y siempre trato de dar lo mejor de mi.</p>
+      <p>Hola! Soy de Perú 🇵🇪 y tengo 12 años.</p>
+      <p>En mis tiempos libres estudio y aprendo más sobre programación.</p>
+      <p>Primero fue un hobbie pero ahora es mi pasión. Me gustan las matemáticas y los videojuegos y siempre trato de dar lo mejor de mi.</p>
     </div>
   </div>
 </section>
@@ -231,27 +244,71 @@ const projects = [
 </section>
 
 <script>
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
+  // app.js
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          entry.target.style.setProperty('--delay', index);
-          entry.target.classList.add(entry.target.dataset.animation || 'fade-up');
-          observer.unobserve(entry.target);
+if (typeof window !== "undefined" && "IntersectionObserver" in window) {
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.setProperty("--delay", index);
+        entry.target.classList.add(entry.target.dataset.animation || "fade-up");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Seleccionar elementos para animar
+  document
+    .querySelectorAll(
+      ".role, .typing, .subtitle, .circle, .project-card, .stack svg, .contact-links a, .section-title, .about-text, .square"
+    )
+    .forEach((el) => {
+      el.classList.add("hidden");
+      observer.observe(el);
+    });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
+  // Form validation and reset
+  const form = document.querySelector(".contact-form");
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          form.reset();
+          alert("Mensaje enviado con éxito!");
         }
-      });
-    }, observerOptions);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    });
+  }
+}
 
-    // Seleccionar elementos para animar
-    document.querySelectorAll('.role, .typing, .subtitle, .circle, .project-card, .stack svg, .contact-links a, .section-title, .about-text, .square')
-      .forEach(el => {
-        el.classList.add('hidden');
-        observer.observe(el);
-      });
-  </script>
+</script>
+
+
+
 </Layout>
