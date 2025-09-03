@@ -8,7 +8,7 @@ nav {
 
   display: flex;
   align-items: center;
-  justify-content: space-between; /* links centrados y icons a la derecha */
+  justify-content: space-between; 
 
   width: 95%;
   max-width: 1100px;
@@ -26,7 +26,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 2.5rem;
-  flex: 1; /* ocupa el espacio central */
+  flex: 1; 
   margin: 0;
   padding: 0;
 }
@@ -83,20 +83,17 @@ nav {
 
 /* ---------------- HERO ---------------- */
 .hero {
-  min-height: 90vh;
+  min-height: 80vh;  
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  padding: 0 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative; /* para posicionar el arrow dentro del hero */
+  gap: 2rem;        
+  padding: 6rem 2rem 0;  
 }
 
 .circle {
-  width: 300px;
-  height: 300px;
+  width: 300px;    
+  height: 300px;    
   border-radius: 50%;
   border: 4px solid rgba(255,255,255,0.3);
   flex-shrink: 0;
@@ -107,7 +104,7 @@ nav {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;        
   margin-bottom: 0;
 }
 
@@ -135,7 +132,7 @@ nav {
 
 /* Typing */
 .typing {
-  font-size: 3.5rem;
+  font-size: 3.5rem;  
   font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
@@ -164,7 +161,7 @@ nav {
 }
 
 .subtitle{
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
     max-width: 540px;
@@ -259,7 +256,7 @@ nav {
 
 .about {
   min-height: 100vh;
-  display: block; /* reemplaza el grid de la sección */
+  display: block; 
   width: min(1200px, 92%);
   margin-inline: auto;
 }
@@ -281,7 +278,7 @@ nav {
   grid-template-columns: minmax(260px, 520px) 1fr;
   gap: clamp(100px, 8vw, 500px);
   align-items: center;
-  margin-top: 100px;
+  margin-top: 2rem; 
   font-size: 1.5rem;
 
 }
@@ -292,6 +289,7 @@ nav {
   padding-left: clamp(8px, 2vw, 24px);
   justify-self: start;
   color: rgba(255, 255, 255, 0.582);
+  font-size: 1.2rem;
 }
 
 
@@ -301,28 +299,28 @@ nav {
   padding: 2rem;
   display: flex;
   justify-content: center;
-  align-items: center; /* centra vertical */
-  flex-direction: column; /* para que el título quede arriba */
+  align-items: center; 
+  flex-direction: column;
   min-height: 100vh;
 }
 
 .section-title {
-  font-size: 3.5rem;
-  background: linear-gradient(90deg, #00BFFF, #ade5e9); /* azul → morado */
+  font-size: 3.2rem;  
+  background: linear-gradient(90deg, #00BFFF, #ade5e9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;  /* reducido de 2rem */
 }
 
 .stack {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* ajustable */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
   gap: 1.5rem;
   max-width: 800px;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 2rem;  
 }
 
 .stack svg {
@@ -467,7 +465,7 @@ button:hover{
 
   .project-content h3 {
     margin: 0;
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     color: #fff;
     margin-bottom: 1rem;
   }
@@ -592,6 +590,7 @@ button:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1.5rem;
 }
 
 .contact-info {
@@ -603,7 +602,7 @@ button:hover{
 }
 
 .contact-info p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2rem;
 }
@@ -653,7 +652,7 @@ button:hover{
 
 .contact-form input,
 .contact-form textarea {
-  width: calc(100% - 3rem); /* Ajustado para compensar el padding */
+  width: calc(100% - 3rem);
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -709,7 +708,7 @@ button:hover{
 }
 
 .soft-skills {
-  margin-top: 4rem;
+  margin-top: 3.5rem;  
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -722,6 +721,27 @@ button:hover{
   padding: 0.75rem 1.5rem;
   border-radius: 99px;
   color: #fff;
+}
+
+.dev-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #60a5fa, #22d3ee, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: gradientText 3s linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @media (max-width: 1024px) {
@@ -768,13 +788,13 @@ button:hover{
   }
 
   .typing {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
-
+  
   .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
-
+  
   .circle {
     width: 180px;
     height: 180px;
@@ -782,7 +802,7 @@ button:hover{
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .stack {
