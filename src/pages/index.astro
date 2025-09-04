@@ -166,14 +166,14 @@ const projects = [
               loading="lazy"
             />
             <div class="project-overlay">
-              <a href={link} target="_blank" rel="noopener" class="project-link">
-                Ver proyecto
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/>
-                  <line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
-              </a>
+              <div class="overlay-buttons">
+                <a href={link} target="_blank" rel="noopener" class="project-link">
+                  <i class="fas fa-external-link-alt"></i> Ver proyecto
+                </a>
+                <a href={github} target="_blank" rel="noopener" class="project-link github">
+                  <i class="fab fa-github"></i> Código
+                </a>
+              </div>
             </div>
           </div>
           <div class="project-content">
@@ -182,11 +182,6 @@ const projects = [
             <ul class="project-tags">
               {tags.map(tag => <li>{tag}</li>)}
             </ul>
-            <div class="project-links">
-              <a href={github} class="github-link">
-                <i class="fab fa-github"></i> Código
-              </a>
-            </div>
           </div>
         </article>
       ))
@@ -196,12 +191,32 @@ const projects = [
 
 <section class="about" id="about">
   <h2 class="section-title">Sobre mí</h2>
+  
   <div class="about-grid">
-    <div class="square"></div>
+    <div class="square">
+    </div>
+    
     <div class="about-text">
-      <p>Hola! Soy de Perú 🇵🇪 y tengo 12 años.</p>
-      <p>En mis tiempos libres estudio y aprendo más sobre programación.</p>
-      <p>Primero fue un hobbie pero ahora es mi pasión. Me gustan las matemáticas y los videojuegos y siempre trato de dar lo mejor de mi.</p>
+      <p>¡Hola! 👋 Soy un joven <span class="highlight">desarrollador frontend</span> de Perú 🇵🇪 con una pasión por crear experiencias web únicas.</p>
+      
+      <p>A mis 12 años, he descubierto que la programación es más que un hobby - es mi forma de dar vida a ideas creativas y resolver problemas. Me encanta combinar las <span class="highlight">matemáticas</span> con el código para crear soluciones elegantes.</p>
+      
+      <p>Cuando no estoy programando, me encuentras jugando videojuegos o aprendiendo nuevas tecnologías. Siempre busco superarme y crear proyectos que marquen la diferencia.</p>
+      
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Años</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Proyectos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Tecnologías</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

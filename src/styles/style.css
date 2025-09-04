@@ -255,46 +255,105 @@ nav {
 
 
 .about {
-  min-height: 100vh;
-  display: block; 
+  min-height: 80vh;
   width: min(1200px, 92%);
   margin-inline: auto;
+  padding: 2rem;
 }
 
 
+
+.about-grid {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
 
 .square {
-  width: 550px;
+  position: relative;
+  width: 500px;
   height: 500px;
-  border: rgba(255, 255, 255, 0.534) 2px solid;
-  border-radius: 30px;
-  justify-self: start;     
-  margin-left: 0;        
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
 }
 
-
-.about-grid{
-  display: grid;
-  grid-template-columns: minmax(260px, 520px) 1fr;
-  gap: clamp(100px, 8vw, 500px);
-  align-items: center;
-  margin-top: 2rem; 
-  font-size: 1.5rem;
-
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-
-.about-text{
-  max-width: 60ch;
-  padding-left: clamp(8px, 2vw, 24px);
-  justify-self: start;
-  color: rgba(255, 255, 255, 0.582);
+.about-text p {
   font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
 }
 
+.about-text .highlight {
+  color: #60a5fa;
+  font-weight: 600;
+}
 
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
+.stat-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
 
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #60a5fa, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+}
+
+@media (max-width: 968px) {
+  .about-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .square {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------------- SKILLS ---------------- */
 .skills {
   padding: 2rem;
   display: flex;
@@ -441,23 +500,41 @@ button:hover{
     opacity: 1;
   }
 
-  .project-link {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: #3b82f6;
-    color: white;
-    text-decoration: none;
-    padding: 1rem 2rem;
-    border-radius: 99px;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-  }
+  .overlay-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
 
-  .project-link:hover {
-    background: #2563eb;
-  }
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 99px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.project-link.github {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+}
+
+.project-link.github:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Eliminar estilos antiguos de project-links y github-link que ya no se usarán */
 
   .project-content {
     padding: 2rem;
