@@ -68,7 +68,7 @@ const projects = [
   <div class="content">
     <p class="dev-title">Frontend Developer</p>
     <p class="role">Desarrollador Frontend</p>
-    <h1 class="typing">Hey, soy Gabriel Aedo</h1>
+    <h1 class="typing" id="typing"></h1>
     <p class="subtitle">Desarrollador frontend de Perú, apasionado por crear experiencias digitales modernas, funcionales y atractivas.</p>
     <div class="cta-buttons">
       <a href="#contact" class="cta-primary">¡Hablemos!</a>
@@ -274,10 +274,47 @@ if (typeof window !== "undefined" && "IntersectionObserver" in window) {
       if (entry.isIntersecting) {
         entry.target.style.setProperty("--delay", index);
         entry.target.classList.add(entry.target.dataset.animation || "fade-up");
+        
+        // Si es el elemento typing, iniciamos el efecto después de un delay
+        if (entry.target.id === "typing") {
+          setTimeout(() => {
+            startTypingEffect();
+          }, 800); // Esperar a que termine la animación de entrada
+        }
+        
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
+
+  // Función para el efecto typing
+  function startTypingEffect() {
+    const typingEl = document.getElementById("typing");
+    if (typingEl) {
+      const text = "Hey, soy Gabriel Aedo";
+      let i = 0;
+      
+      // Crear el contenedor del cursor
+      const cursor = document.createElement('span');
+      cursor.className = 'typing-cursor';
+      cursor.textContent = '|';
+      
+      function type() {
+        if (i <= text.length) {
+          typingEl.innerHTML = text.slice(0, i) + cursor.outerHTML;
+          i++;
+          setTimeout(type, 100);
+        } else {
+          // Mantener el cursor parpadeando al final
+          typingEl.innerHTML = text + cursor.outerHTML;
+        }
+      }
+      
+      // Limpiar el contenido inicial y empezar
+      typingEl.innerHTML = cursor.outerHTML;
+      setTimeout(type, 300);
+    }
+  }
 
   // Seleccionar elementos para animar
   document
