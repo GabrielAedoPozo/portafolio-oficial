@@ -251,7 +251,6 @@ nav {
   animation: scaleIn 0.6s ease forwards;
 }
 
-/* Ajustar delays por sección */
 .hero .role { animation-delay: 0.2s; }
 .hero .typing { animation-delay: 0.4s; }
 .hero .subtitle { animation-delay: 0.6s; }
@@ -322,6 +321,11 @@ nav {
 }
 
 .about-text .highlight {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.highlight {
   color: #60a5fa;
   font-weight: 600;
 }
@@ -406,16 +410,20 @@ nav {
   margin-top: 2rem;  
 }
 
+
+
 .stack svg {
   width: 60px;
   height: 60px;
-  background-color: rgb(20, 20, 20);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
   padding: 10px;
-  margin: auto;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: 0.3s ease;
 }
+
 
 .stack svg:hover {
   transform: scale(1.1);
